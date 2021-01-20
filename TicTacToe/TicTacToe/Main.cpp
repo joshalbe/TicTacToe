@@ -18,6 +18,7 @@ int main()
 	bool p1Turn = true;
 
 	while (!won) {
+
 		std::cout << "Input Board" << std::endl;
 		std::cout << " " << intBoard[0] << " " << intBoard[1] << " " << intBoard[2] << std::endl;
 		std::cout << " " << intBoard[3] << " " << intBoard[4] << " " << intBoard[5] << std::endl;
@@ -100,7 +101,16 @@ int main()
 
 				}
 
-
+				if (
+					showBoard[0] != ' ' && showBoard[1] != ' ' && showBoard[2] != ' ' && showBoard[3] != ' ' &&
+					showBoard[4] != ' ' && showBoard[5] != ' ' && showBoard[6] != ' ' && showBoard[7] != ' ' &&
+					showBoard[8] != ' '
+					) 
+				{
+					std::cout << "Cat's!" << std::endl;
+					system("pause");
+					won = true;
+				}
 				system("cls");
 			}
 		}
