@@ -1,9 +1,19 @@
 #include <iostream>
 
-
-
 int main()
 {
+	char name1[17];
+	char name2[17];
+
+	std::cout << "P1, please enter your name in 16 characters or less" << std::endl;
+	std::cin >> name1;
+	system("cls");
+
+	std::cout << "P2, please enter your name in 16 characters or less" << std::endl;
+	std::cin >> name2;
+	system("cls");
+
+
 	int intBoard[9] = {
 		1, 2, 3,
 		4, 5, 6,
@@ -34,10 +44,10 @@ int main()
 		std::cout << std::endl;
 
 		if (p1Turn) {
-			std::cout << "P1's turn" << std::endl;
+			std::cout << name1 << "'s turn" << std::endl;
 		}
 		else {
-			std::cout << "P2's turn" << std::endl;
+			std::cout << name2 << "'s turn" << std::endl;
 		}
 
 		int input = -1;
@@ -80,11 +90,11 @@ int main()
 					) {
 
 					if (p1Turn) {
-						std::cout << "P1 WINS!" << std::endl;
+						std::cout << name1 << " WINS!" << std::endl;
 						system("pause");
 					}
 					else {
-						std::cout << "P2 WINS!" << std::endl;
+						std::cout << name2 << " WINS!" << std::endl;
 						system("pause");
 					}
 
